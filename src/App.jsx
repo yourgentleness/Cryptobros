@@ -3,6 +3,7 @@ import { Layout, Typography, Space } from 'antd'
 import { Navbar } from "./components"
 import { Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components'
 import './App.css'
+
 const App = () => {
   return (
     <div className="app">
@@ -21,9 +22,19 @@ const App = () => {
               </Routes>  
           </div>
         </Layout>
-      </div>
       <div className="footer">
-      
+        <Typography.Title level={2} style={{ color: "black", textAlign: "center" }}>Copyright © 2024
+          <Link to="/" className="text-red-500">
+            Cryptobros Inc. 
+          </Link> <br/>
+          All Right Reversed.
+        </Typography.Title>
+        <Space>
+          <Link to="/">Home</Link>
+          <Link to="/exchanges">Exchanges</Link>
+          <Link to="/news">News</Link>
+        </Space>
+      </div>
       </div>
     </div>
   )
