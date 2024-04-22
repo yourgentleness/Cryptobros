@@ -2,17 +2,16 @@ import {  Routes, Route, Link, BrowserRouter } from "react-router-dom"
 import { Layout, Typography, Space } from 'antd'
 import { Navbar } from "./components"
 import { Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components'
-import './App.css'
 
 const App = () => {
   return (
-    <div className="app">
-      <div className="navbar">
+    <div className="flex truncate">
+      <div className="flex-none">
         <Navbar /> 
       </div>
-      <div className="main">
+      <div className="flex-1 w-full ml-64 pl-4">
        <Layout>
-          <div className='routes'>
+          <div className='p-5'>
               <Routes>
                 <Route path='/' element={<Homepage/>}/>
                 <Route path='/exchanges' element={<Exchanges/>}/>
@@ -22,7 +21,7 @@ const App = () => {
               </Routes>  
           </div>
         </Layout>
-      <div className="footer">
+      <div className="flex items-center bg-custom-blue">
         <Typography.Title level={2} style={{ color: "black", textAlign: "center" }}>Copyright © 2024
           <Link to="/" className="text-red-500">
             Cryptobros Inc. 
