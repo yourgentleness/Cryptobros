@@ -18,10 +18,10 @@ const App = () => {
                 <Route path='/cryptocurrencies' element={<Cryptocurrencies/>}/>
                 <Route path='/crypto/:coinId' element={<CryptoDetails/>}/>
                 <Route path='/news' element={<News/>}/>
-              </Routes>  
+              </Routes>
           </div>
         </Layout>
-      <div className="flex items-center bg-custom-blue">
+      <div className="flex flex-col items-center bg-custom-blue p-4">
         <Typography.Title level={2} style={{ color: "black", textAlign: "center" }}>Copyright © 2024
           <Link to="/" className="text-red-500">
             Cryptobros Inc. 
