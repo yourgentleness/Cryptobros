@@ -7,8 +7,6 @@ import icon from '../images/CryptoLogo.png'
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
 
-
-
   return (
     <div className='fixed pl-1 pr-11 py-2 h-screen left-0 color bg-custom-blue m-0'>
       <div className='flex p-2 items-center w-full '>
@@ -16,7 +14,7 @@ const Navbar = () => {
         <Typography.Title level={2} className='ml-2'>
           <Link to='/'>Cryptobros</Link>
         </Typography.Title>
-        <Button  className=' absolute right-1 top-5 text-xs border-none bg-bgSecondary' onClick={ () => setActiveMenu(!activeMenu) }><MenuOutlined /></Button>
+        <Button  className='absolute right-1 top-5 text-xs border-none bg-bgSecondary' onClick={ () => setActiveMenu(!activeMenu) }><MenuOutlined /></Button>
       </div>
     {activeMenu && (
       <Menu style={{ backgroundColor:'rgb(0, 21, 41)'}}>
